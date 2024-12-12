@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #00274d;
+            color: #fff;
+            text-align: center;
+        }
+
+        .btn-flash {
+            box-shadow: 0 0 20px white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="mt-4">Simon Game</h1>
+    <div class="d-flex justify-content-center gap-4">
+        <h4 id="your-score">Your Score: <span id="your-score-span">0</span></h4>
+        <div id="highest-score-container" style="position: relative; display: inline-block;">
+          <h4 id="highest-score">High Score: <span id="high-score-span"></span></h4>
+          <span id="crown-emoji"  style="display: none;position: absolute; top: -30%; right: -8%;transform: rotate(25deg);">👑</span>
+        </div>
+      </div>
+      
+    <h3 id="level-title" class="mt-3">Press Any Key to Start</h3>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center">
+            <div class="bg-success rounded-2 me-3 p-5" id="green" role="button"></div>
+            <div class="bg-danger rounded-2 ms-3 p-5" id="red" role="button"></div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <div class="bg-warning rounded-2 me-3 p-5" id="yellow" role="button"></div>
+            <div class="bg-primary rounded-2 ms-3 p-5" id="blue" role="button"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
