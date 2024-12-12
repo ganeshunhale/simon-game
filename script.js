@@ -47,6 +47,8 @@ function checkAnswer(currentLevel) {
             if (yourScore > highestScore) {
                 highScoreElement.innerHTML = yourScore;
                 crownEmoji.style.display = 'block';
+                localStorage.setItem('highScore', yourScore)
+
             }
         }
 
@@ -59,7 +61,6 @@ function checkAnswer(currentLevel) {
         document.getElementById("level-title").textContent =
             "Game Over! Press Any Key to Restart";
         resetGame();
-        localStorage.setItem('highScore', yourScore)
         yourScore = 0;
         yourScoreElement.innerText = yourScore
         crownEmoji.style.display = 'none';
