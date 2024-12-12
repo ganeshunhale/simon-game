@@ -5,6 +5,7 @@ let level = 0;
 let started = false;
 let yourScore = 0
 let highestScore = localStorage.getItem('highScore') || 0
+console.log(highestScore)
 
 document.addEventListener("keydown", () => {
     if (!started) {
@@ -26,7 +27,7 @@ document.querySelectorAll("[role='button']").forEach((btn) => {
     btn.addEventListener("click", (e) => {
         const userColor = e.target.id;
         userPattern.push(userColor);
-        playSound(userColor);
+        // playSound(userColor);
         animatePress(userColor);
         checkAnswer(userPattern.length - 1);
     });
@@ -50,7 +51,7 @@ function checkAnswer(currentLevel) {
         }
 
     } else {
-        playSound("wrong");
+        // playSound("wrong");
         document.body.classList.add("bg-danger");
         setTimeout(() => {
             document.body.classList.remove("bg-danger");
@@ -78,7 +79,7 @@ function nextSequence() {
         selectedButton.classList.remove("btn-flash");
     }, 300);
 
-    playSound(randomColor);
+    // playSound(randomColor);
 }
 
 function playSound(name) {
