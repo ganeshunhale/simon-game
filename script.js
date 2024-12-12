@@ -21,7 +21,13 @@ let yourScoreElement = document.getElementById('your-score-span')
 let highScoreElement = document.getElementById('high-score-span')
 let crownEmoji = document.getElementById('crown-emoji')
 highScoreElement.innerHTML = highestScore
-
+document.getElementById("level-title").addEventListener("click", (e) => {
+    console.log("clicled");
+    if (!started) {
+    nextSequence();
+        started = true;}
+        
+})
 
 document.querySelectorAll("[role='button']").forEach((btn) => {
     btn.addEventListener("click", (e) => {
