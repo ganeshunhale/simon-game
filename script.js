@@ -44,7 +44,12 @@ function checkAnswer(currentLevel) {
 
             yourScore = yourScore + 1;
             yourScoreElement.innerText = yourScore
+            console.log("highscoreafter",highestScore);
+            highestScore = localStorage.getItem('highScore') || 0
+            
+
             if (yourScore > highestScore) {
+                
                 highScoreElement.innerHTML = yourScore;
                 crownEmoji.style.display = 'block';
                 localStorage.setItem('highScore', yourScore)
